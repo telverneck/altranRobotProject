@@ -59,3 +59,10 @@ Validar Campos
     E tenho a informacao do seguro:  ${data}
     Quando preencho as informaçoes
     Entao verifico se o botao Seguinte esta desabilitado
+
+Simular seguro
+    [Arguments]      ${data}
+    Dado que acesso a pagina de Simulaçao de seguro
+    E tenho a informacao do seguro:  ${data}
+    Quando submeto a informacao do seguro
+    Entao devo o resultado da pré-simulação

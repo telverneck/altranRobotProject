@@ -1,447 +1,409 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.0 (Python 3.9.1 on win32)" generated="20210401 19:06:25.092" rpa="false" schemaversion="2">
-<suite id="s1" name="Simular Seguro Invalido" source="C:\projetoAltan\tests\simular_seguro_invalido.robot">
-<test id="s1-t1" name="Seguro é invalido 1">
+<robot generator="Robot 4.0 (Python 3.9.1 on win32)" generated="20210401 19:16:47.973" rpa="false" schemaversion="2">
+<suite id="s1" name="Simular Seguro" source="C:\projetoAltan\tests\simular_seguro.robot">
+<test id="s1-t1" name="Simular seguro">
 <kw name="Go to Simulador" library="hooks" type="SETUP">
 <kw name="Start Session" library="hooks">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20210401 19:06:25.265" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20210401 19:06:25.265" endtime="20210401 19:06:26.411"/>
+<msg timestamp="20210401 19:16:48.145" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210401 19:16:48.145" endtime="20210401 19:16:49.274"/>
 </kw>
 <kw name="Set Window Size" library="SeleniumLibrary">
 <arg>${BROWSER_WIDTH}</arg>
 <arg>${BROWSER_HEIGHT}</arg>
 <doc>Sets current windows size to given ``width`` and ``height``.</doc>
-<status status="PASS" starttime="20210401 19:06:26.411" endtime="20210401 19:06:26.522"/>
+<status status="PASS" starttime="20210401 19:16:49.274" endtime="20210401 19:16:49.381"/>
 </kw>
-<status status="PASS" starttime="20210401 19:06:25.264" endtime="20210401 19:06:26.522"/>
+<status status="PASS" starttime="20210401 19:16:48.144" endtime="20210401 19:16:49.381"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${BASE_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20210401 19:06:26.522" level="INFO">Opening url 'https://www.fidelidade.pt/PT/particulares/Auto/Simuladores/Automovel/Paginas/default.aspx'</msg>
-<status status="PASS" starttime="20210401 19:06:26.522" endtime="20210401 19:06:47.239"/>
+<msg timestamp="20210401 19:16:49.381" level="INFO">Opening url 'https://www.fidelidade.pt/PT/particulares/Auto/Simuladores/Automovel/Paginas/default.aspx'</msg>
+<status status="PASS" starttime="20210401 19:16:49.381" endtime="20210401 19:17:03.383"/>
 </kw>
-<status status="PASS" starttime="20210401 19:06:25.264" endtime="20210401 19:06:47.239"/>
+<status status="PASS" starttime="20210401 19:16:48.144" endtime="20210401 19:17:03.383"/>
 </kw>
-<kw name="Validar Campos" library="simuladoresPage">
-<arg>ZZ-AA-00</arg>
+<kw name="Simular seguro" library="simuladoresPage">
+<arg>05-DE-82</arg>
 <kw name="Dado que acesso a pagina de Simulaçao de seguro" library="simuladoresPage">
 <kw name="Wait for dialog" library="simuladoresPage">
 <kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
 <arg>${loading_dialog}</arg>
 <arg>${LONGTIMEOUT}</arg>
 <doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20210401 19:06:47.241" endtime="20210401 19:06:47.252"/>
+<status status="PASS" starttime="20210401 19:17:03.385" endtime="20210401 19:17:03.394"/>
 </kw>
-<status status="PASS" starttime="20210401 19:06:47.241" endtime="20210401 19:06:47.252"/>
+<status status="PASS" starttime="20210401 19:17:03.384" endtime="20210401 19:17:03.394"/>
 </kw>
 <kw name="Switch to iframe" library="base">
 <kw name="Select Frame" library="SeleniumLibrary">
 <arg>${FRAME}</arg>
 <doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<msg timestamp="20210401 19:06:47.253" level="INFO">Selecting frame 'css:iframe#Simulator'.</msg>
-<status status="PASS" starttime="20210401 19:06:47.253" endtime="20210401 19:06:47.279"/>
+<msg timestamp="20210401 19:17:03.394" level="INFO">Selecting frame 'css:iframe#Simulator'.</msg>
+<status status="PASS" starttime="20210401 19:17:03.394" endtime="20210401 19:17:03.420"/>
 </kw>
-<status status="PASS" starttime="20210401 19:06:47.252" endtime="20210401 19:06:47.279"/>
+<status status="PASS" starttime="20210401 19:17:03.394" endtime="20210401 19:17:03.420"/>
 </kw>
-<status status="PASS" starttime="20210401 19:06:47.240" endtime="20210401 19:06:47.279"/>
+<status status="PASS" starttime="20210401 19:17:03.384" endtime="20210401 19:17:03.420"/>
 </kw>
 <kw name="E tenho a informacao do seguro:" library="simuladoresPage">
 <arg>${data}</arg>
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${data_simulate}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20210401 19:06:47.280" level="INFO">${data_simulate} = ZZ-AA-00</msg>
-<status status="PASS" starttime="20210401 19:06:47.280" endtime="20210401 19:06:47.280"/>
+<msg timestamp="20210401 19:17:03.421" level="INFO">${data_simulate} = 05-DE-82</msg>
+<status status="PASS" starttime="20210401 19:17:03.421" endtime="20210401 19:17:03.421"/>
 </kw>
-<status status="PASS" starttime="20210401 19:06:47.279" endtime="20210401 19:06:47.280"/>
+<status status="PASS" starttime="20210401 19:17:03.420" endtime="20210401 19:17:03.421"/>
 </kw>
+<kw name="Quando submeto a informacao do seguro" library="simuladoresPage">
 <kw name="Quando preencho as informaçoes" library="simuladoresPage">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${license_text}</arg>
 <arg>${LONGTIMEOUT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210401 19:06:47.280" endtime="20210401 19:06:47.301"/>
+<status status="PASS" starttime="20210401 19:17:03.422" endtime="20210401 19:17:03.441"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${license_text}</arg>
 <arg>${data_simulate}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210401 19:06:47.301" level="INFO">Typing text 'ZZ-AA-00' into text field 'xpath://div[@class="LicenseContainer OSInline"]//input'.</msg>
-<status status="PASS" starttime="20210401 19:06:47.301" endtime="20210401 19:06:47.379"/>
+<msg timestamp="20210401 19:17:03.442" level="INFO">Typing text '05-DE-82' into text field 'xpath://div[@class="LicenseContainer OSInline"]//input'.</msg>
+<status status="PASS" starttime="20210401 19:17:03.441" endtime="20210401 19:17:03.512"/>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <arg>${simulate_button}</arg>
 <arg>Tab</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20210401 19:06:47.379" level="INFO">Sending key(s) ('Tab',) to css:input[class*=NextButton] element.</msg>
-<msg timestamp="20210401 19:06:47.686" level="INFO">Sending keys Tab</msg>
-<status status="PASS" starttime="20210401 19:06:47.379" endtime="20210401 19:06:47.693"/>
+<msg timestamp="20210401 19:17:03.512" level="INFO">Sending key(s) ('Tab',) to css:input[class*=NextButton] element.</msg>
+<msg timestamp="20210401 19:17:03.813" level="INFO">Sending keys Tab</msg>
+<status status="PASS" starttime="20210401 19:17:03.512" endtime="20210401 19:17:03.821"/>
 </kw>
 <kw name="Wait for loading icon to disappears" library="simuladoresPage">
 <kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
 <arg>${loading_icon}</arg>
 <doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20210401 19:06:47.694" endtime="20210401 19:06:47.702"/>
+<status status="PASS" starttime="20210401 19:17:03.821" endtime="20210401 19:17:03.829"/>
 </kw>
-<status status="PASS" starttime="20210401 19:06:47.693" endtime="20210401 19:06:47.702"/>
+<status status="PASS" starttime="20210401 19:17:03.821" endtime="20210401 19:17:03.829"/>
 </kw>
-<status status="PASS" starttime="20210401 19:06:47.280" endtime="20210401 19:06:47.702"/>
+<status status="PASS" starttime="20210401 19:17:03.421" endtime="20210401 19:17:03.829"/>
 </kw>
-<kw name="Entao verifico se o botao Seguinte esta desabilitado" library="simuladoresPage">
-<kw name="E verifico se o botao Seguinte esta desabilitado" library="simuladoresPage">
-<kw name="Check if button is disabled" library="simuladoresPage">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${disabled_button}</arg>
-<arg>${TIMEOUT}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210401 19:06:47.703" endtime="20210401 19:06:47.722"/>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${simulate_button}</arg>
+<arg>${LONGTIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210401 19:18:04.138" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-114.png"&gt;&lt;img src="selenium-screenshot-114.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210401 19:18:03.863" endtime="20210401 19:18:04.138"/>
 </kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${buttonDisabled}</var>
-<arg>${disabled_button}</arg>
-<arg>disabled</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20210401 19:06:47.732" level="INFO">${buttonDisabled} = true</msg>
-<status status="PASS" starttime="20210401 19:06:47.722" endtime="20210401 19:06:47.732"/>
+<msg timestamp="20210401 19:18:04.139" level="FAIL">Element with locator 'css:input[class*=NextButton]' not found.</msg>
+<status status="FAIL" starttime="20210401 19:17:03.829" endtime="20210401 19:18:04.140"/>
 </kw>
-<kw name="Log" library="BuiltIn">
-<arg>${buttonDisabled}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20210401 19:06:47.733" level="INFO">true</msg>
-<status status="PASS" starttime="20210401 19:06:47.733" endtime="20210401 19:06:47.733"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${simulate_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210401 19:18:04.140" endtime="20210401 19:18:04.140"/>
 </kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${buttonDisabled}</arg>
-<arg>true</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20210401 19:06:47.733" endtime="20210401 19:06:47.733"/>
+<status status="FAIL" starttime="20210401 19:17:03.421" endtime="20210401 19:18:04.140"/>
 </kw>
-<status status="PASS" starttime="20210401 19:06:47.702" endtime="20210401 19:06:47.733"/>
+<kw name="Entao devo o resultado da pré-simulação" library="simuladoresPage">
+<status status="NOT RUN" starttime="20210401 19:18:04.140" endtime="20210401 19:18:04.140"/>
 </kw>
-<status status="PASS" starttime="20210401 19:06:47.702" endtime="20210401 19:06:47.733"/>
-</kw>
-<status status="PASS" starttime="20210401 19:06:47.702" endtime="20210401 19:06:47.733"/>
-</kw>
-<status status="PASS" starttime="20210401 19:06:47.240" endtime="20210401 19:06:47.733"/>
+<status status="FAIL" starttime="20210401 19:17:03.384" endtime="20210401 19:18:04.140"/>
 </kw>
 <kw name="Finish Session" library="hooks" type="TEARDOWN">
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20210401 19:06:48.065" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-103.png"&gt;&lt;img src="selenium-screenshot-103.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20210401 19:06:47.734" endtime="20210401 19:06:48.065"/>
+<msg timestamp="20210401 19:18:04.420" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-115.png"&gt;&lt;img src="selenium-screenshot-115.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210401 19:18:04.141" endtime="20210401 19:18:04.421"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20210401 19:06:48.065" endtime="20210401 19:06:50.191"/>
+<status status="PASS" starttime="20210401 19:18:04.421" endtime="20210401 19:18:06.522"/>
 </kw>
-<status status="PASS" starttime="20210401 19:06:47.734" endtime="20210401 19:06:50.191"/>
+<status status="PASS" starttime="20210401 19:18:04.141" endtime="20210401 19:18:06.522"/>
 </kw>
-<tag>invalid</tag>
-<status status="PASS" starttime="20210401 19:06:25.263" endtime="20210401 19:06:50.192"/>
+<tag>smoke</tag>
+<status status="FAIL" starttime="20210401 19:16:48.144" endtime="20210401 19:18:06.523">Element with locator 'css:input[class*=NextButton]' not found.</status>
 </test>
-<test id="s1-t2" name="Seguro é invalido 2">
+<test id="s1-t2" name="Seguro é valido 1">
 <kw name="Go to Simulador" library="hooks" type="SETUP">
 <kw name="Start Session" library="hooks">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20210401 19:06:50.195" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20210401 19:06:50.195" endtime="20210401 19:06:51.304"/>
+<msg timestamp="20210401 19:18:06.527" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210401 19:18:06.526" endtime="20210401 19:18:07.621"/>
 </kw>
 <kw name="Set Window Size" library="SeleniumLibrary">
 <arg>${BROWSER_WIDTH}</arg>
 <arg>${BROWSER_HEIGHT}</arg>
 <doc>Sets current windows size to given ``width`` and ``height``.</doc>
-<status status="PASS" starttime="20210401 19:06:51.305" endtime="20210401 19:06:51.416"/>
+<status status="PASS" starttime="20210401 19:18:07.621" endtime="20210401 19:18:07.731"/>
 </kw>
-<status status="PASS" starttime="20210401 19:06:50.194" endtime="20210401 19:06:51.416"/>
+<status status="PASS" starttime="20210401 19:18:06.526" endtime="20210401 19:18:07.731"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${BASE_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20210401 19:06:51.416" level="INFO">Opening url 'https://www.fidelidade.pt/PT/particulares/Auto/Simuladores/Automovel/Paginas/default.aspx'</msg>
-<status status="PASS" starttime="20210401 19:06:51.416" endtime="20210401 19:07:10.040"/>
+<msg timestamp="20210401 19:18:07.731" level="INFO">Opening url 'https://www.fidelidade.pt/PT/particulares/Auto/Simuladores/Automovel/Paginas/default.aspx'</msg>
+<status status="PASS" starttime="20210401 19:18:07.731" endtime="20210401 19:18:28.574"/>
 </kw>
-<status status="PASS" starttime="20210401 19:06:50.194" endtime="20210401 19:07:10.041"/>
+<status status="PASS" starttime="20210401 19:18:06.526" endtime="20210401 19:18:28.574"/>
 </kw>
-<kw name="Validar Campos" library="simuladoresPage">
-<arg>111111</arg>
+<kw name="Simular seguro" library="simuladoresPage">
+<arg>24-54-XI</arg>
 <kw name="Dado que acesso a pagina de Simulaçao de seguro" library="simuladoresPage">
 <kw name="Wait for dialog" library="simuladoresPage">
 <kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
 <arg>${loading_dialog}</arg>
 <arg>${LONGTIMEOUT}</arg>
 <doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20210401 19:07:10.042" endtime="20210401 19:07:10.051"/>
+<status status="PASS" starttime="20210401 19:18:28.575" endtime="20210401 19:18:28.585"/>
 </kw>
-<status status="PASS" starttime="20210401 19:07:10.042" endtime="20210401 19:07:10.051"/>
+<status status="PASS" starttime="20210401 19:18:28.575" endtime="20210401 19:18:28.585"/>
 </kw>
 <kw name="Switch to iframe" library="base">
 <kw name="Select Frame" library="SeleniumLibrary">
 <arg>${FRAME}</arg>
 <doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<msg timestamp="20210401 19:07:10.052" level="INFO">Selecting frame 'css:iframe#Simulator'.</msg>
-<status status="PASS" starttime="20210401 19:07:10.052" endtime="20210401 19:07:10.076"/>
+<msg timestamp="20210401 19:18:28.586" level="INFO">Selecting frame 'css:iframe#Simulator'.</msg>
+<status status="PASS" starttime="20210401 19:18:28.586" endtime="20210401 19:18:28.612"/>
 </kw>
-<status status="PASS" starttime="20210401 19:07:10.051" endtime="20210401 19:07:10.076"/>
+<status status="PASS" starttime="20210401 19:18:28.585" endtime="20210401 19:18:28.612"/>
 </kw>
-<status status="PASS" starttime="20210401 19:07:10.041" endtime="20210401 19:07:10.076"/>
+<status status="PASS" starttime="20210401 19:18:28.575" endtime="20210401 19:18:28.613"/>
 </kw>
 <kw name="E tenho a informacao do seguro:" library="simuladoresPage">
 <arg>${data}</arg>
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${data_simulate}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20210401 19:07:10.077" level="INFO">${data_simulate} = 111111</msg>
-<status status="PASS" starttime="20210401 19:07:10.077" endtime="20210401 19:07:10.077"/>
+<msg timestamp="20210401 19:18:28.613" level="INFO">${data_simulate} = 24-54-XI</msg>
+<status status="PASS" starttime="20210401 19:18:28.613" endtime="20210401 19:18:28.613"/>
 </kw>
-<status status="PASS" starttime="20210401 19:07:10.076" endtime="20210401 19:07:10.077"/>
+<status status="PASS" starttime="20210401 19:18:28.613" endtime="20210401 19:18:28.613"/>
 </kw>
+<kw name="Quando submeto a informacao do seguro" library="simuladoresPage">
 <kw name="Quando preencho as informaçoes" library="simuladoresPage">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${license_text}</arg>
 <arg>${LONGTIMEOUT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210401 19:07:10.078" endtime="20210401 19:07:10.099"/>
+<status status="PASS" starttime="20210401 19:18:28.614" endtime="20210401 19:18:28.637"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${license_text}</arg>
 <arg>${data_simulate}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210401 19:07:10.100" level="INFO">Typing text '111111' into text field 'xpath://div[@class="LicenseContainer OSInline"]//input'.</msg>
-<status status="PASS" starttime="20210401 19:07:10.099" endtime="20210401 19:07:10.173"/>
+<msg timestamp="20210401 19:18:28.637" level="INFO">Typing text '24-54-XI' into text field 'xpath://div[@class="LicenseContainer OSInline"]//input'.</msg>
+<status status="PASS" starttime="20210401 19:18:28.637" endtime="20210401 19:18:28.707"/>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <arg>${simulate_button}</arg>
 <arg>Tab</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20210401 19:07:10.174" level="INFO">Sending key(s) ('Tab',) to css:input[class*=NextButton] element.</msg>
-<msg timestamp="20210401 19:07:10.481" level="INFO">Sending keys Tab</msg>
-<status status="PASS" starttime="20210401 19:07:10.173" endtime="20210401 19:07:10.489"/>
+<msg timestamp="20210401 19:18:28.707" level="INFO">Sending key(s) ('Tab',) to css:input[class*=NextButton] element.</msg>
+<msg timestamp="20210401 19:18:29.015" level="INFO">Sending keys Tab</msg>
+<status status="PASS" starttime="20210401 19:18:28.707" endtime="20210401 19:18:29.022"/>
 </kw>
 <kw name="Wait for loading icon to disappears" library="simuladoresPage">
 <kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
 <arg>${loading_icon}</arg>
 <doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20210401 19:07:10.490" endtime="20210401 19:07:10.498"/>
+<status status="PASS" starttime="20210401 19:18:29.023" endtime="20210401 19:18:29.031"/>
 </kw>
-<status status="PASS" starttime="20210401 19:07:10.489" endtime="20210401 19:07:10.498"/>
+<status status="PASS" starttime="20210401 19:18:29.023" endtime="20210401 19:18:29.031"/>
 </kw>
-<status status="PASS" starttime="20210401 19:07:10.077" endtime="20210401 19:07:10.498"/>
+<status status="PASS" starttime="20210401 19:18:28.614" endtime="20210401 19:18:29.031"/>
 </kw>
-<kw name="Entao verifico se o botao Seguinte esta desabilitado" library="simuladoresPage">
-<kw name="E verifico se o botao Seguinte esta desabilitado" library="simuladoresPage">
-<kw name="Check if button is disabled" library="simuladoresPage">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${disabled_button}</arg>
-<arg>${TIMEOUT}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210401 19:07:10.499" endtime="20210401 19:07:10.518"/>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${simulate_button}</arg>
+<arg>${LONGTIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210401 19:19:29.340" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-116.png"&gt;&lt;img src="selenium-screenshot-116.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210401 19:19:29.061" endtime="20210401 19:19:29.340"/>
 </kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${buttonDisabled}</var>
-<arg>${disabled_button}</arg>
-<arg>disabled</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20210401 19:07:10.528" level="INFO">${buttonDisabled} = true</msg>
-<status status="PASS" starttime="20210401 19:07:10.518" endtime="20210401 19:07:10.528"/>
+<msg timestamp="20210401 19:19:29.341" level="FAIL">Element with locator 'css:input[class*=NextButton]' not found.</msg>
+<status status="FAIL" starttime="20210401 19:18:29.031" endtime="20210401 19:19:29.341"/>
 </kw>
-<kw name="Log" library="BuiltIn">
-<arg>${buttonDisabled}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20210401 19:07:10.528" level="INFO">true</msg>
-<status status="PASS" starttime="20210401 19:07:10.528" endtime="20210401 19:07:10.528"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${simulate_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210401 19:19:29.341" endtime="20210401 19:19:29.341"/>
 </kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${buttonDisabled}</arg>
-<arg>true</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20210401 19:07:10.528" endtime="20210401 19:07:10.529"/>
+<status status="FAIL" starttime="20210401 19:18:28.613" endtime="20210401 19:19:29.342"/>
 </kw>
-<status status="PASS" starttime="20210401 19:07:10.498" endtime="20210401 19:07:10.529"/>
+<kw name="Entao devo o resultado da pré-simulação" library="simuladoresPage">
+<status status="NOT RUN" starttime="20210401 19:19:29.342" endtime="20210401 19:19:29.342"/>
 </kw>
-<status status="PASS" starttime="20210401 19:07:10.498" endtime="20210401 19:07:10.529"/>
-</kw>
-<status status="PASS" starttime="20210401 19:07:10.498" endtime="20210401 19:07:10.529"/>
-</kw>
-<status status="PASS" starttime="20210401 19:07:10.041" endtime="20210401 19:07:10.529"/>
+<status status="FAIL" starttime="20210401 19:18:28.574" endtime="20210401 19:19:29.342"/>
 </kw>
 <kw name="Finish Session" library="hooks" type="TEARDOWN">
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20210401 19:07:10.852" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-104.png"&gt;&lt;img src="selenium-screenshot-104.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20210401 19:07:10.530" endtime="20210401 19:07:10.853"/>
+<msg timestamp="20210401 19:19:29.620" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-117.png"&gt;&lt;img src="selenium-screenshot-117.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210401 19:19:29.343" endtime="20210401 19:19:29.620"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20210401 19:07:10.853" endtime="20210401 19:07:12.966"/>
+<status status="PASS" starttime="20210401 19:19:29.620" endtime="20210401 19:19:31.733"/>
 </kw>
-<status status="PASS" starttime="20210401 19:07:10.530" endtime="20210401 19:07:12.966"/>
+<status status="PASS" starttime="20210401 19:19:29.343" endtime="20210401 19:19:31.733"/>
 </kw>
-<tag>invalid</tag>
-<status status="PASS" starttime="20210401 19:06:50.194" endtime="20210401 19:07:12.967"/>
+<status status="FAIL" starttime="20210401 19:18:06.525" endtime="20210401 19:19:31.733">Element with locator 'css:input[class*=NextButton]' not found.</status>
 </test>
-<test id="s1-t3" name="Seguro é invalido 3">
+<test id="s1-t3" name="Seguro é valido 2">
 <kw name="Go to Simulador" library="hooks" type="SETUP">
 <kw name="Start Session" library="hooks">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20210401 19:07:12.969" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20210401 19:07:12.969" endtime="20210401 19:07:14.099"/>
+<msg timestamp="20210401 19:19:31.736" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210401 19:19:31.736" endtime="20210401 19:19:32.858"/>
 </kw>
 <kw name="Set Window Size" library="SeleniumLibrary">
 <arg>${BROWSER_WIDTH}</arg>
 <arg>${BROWSER_HEIGHT}</arg>
 <doc>Sets current windows size to given ``width`` and ``height``.</doc>
-<status status="PASS" starttime="20210401 19:07:14.099" endtime="20210401 19:07:14.207"/>
+<status status="PASS" starttime="20210401 19:19:32.858" endtime="20210401 19:19:32.967"/>
 </kw>
-<status status="PASS" starttime="20210401 19:07:12.969" endtime="20210401 19:07:14.207"/>
+<status status="PASS" starttime="20210401 19:19:31.736" endtime="20210401 19:19:32.967"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${BASE_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20210401 19:07:14.207" level="INFO">Opening url 'https://www.fidelidade.pt/PT/particulares/Auto/Simuladores/Automovel/Paginas/default.aspx'</msg>
-<status status="PASS" starttime="20210401 19:07:14.207" endtime="20210401 19:07:30.760"/>
+<msg timestamp="20210401 19:19:32.967" level="INFO">Opening url 'https://www.fidelidade.pt/PT/particulares/Auto/Simuladores/Automovel/Paginas/default.aspx'</msg>
+<status status="PASS" starttime="20210401 19:19:32.967" endtime="20210401 19:19:49.165"/>
 </kw>
-<status status="PASS" starttime="20210401 19:07:12.969" endtime="20210401 19:07:30.760"/>
+<status status="PASS" starttime="20210401 19:19:31.736" endtime="20210401 19:19:49.165"/>
 </kw>
-<kw name="Validar Campos" library="simuladoresPage">
-<arg>^&amp;*%^^</arg>
+<kw name="Simular seguro" library="simuladoresPage">
+<arg>22-HT-53</arg>
 <kw name="Dado que acesso a pagina de Simulaçao de seguro" library="simuladoresPage">
 <kw name="Wait for dialog" library="simuladoresPage">
 <kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
 <arg>${loading_dialog}</arg>
 <arg>${LONGTIMEOUT}</arg>
 <doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20210401 19:07:30.761" endtime="20210401 19:07:30.770"/>
+<status status="PASS" starttime="20210401 19:19:49.166" endtime="20210401 19:19:49.175"/>
 </kw>
-<status status="PASS" starttime="20210401 19:07:30.761" endtime="20210401 19:07:30.771"/>
+<status status="PASS" starttime="20210401 19:19:49.166" endtime="20210401 19:19:49.176"/>
 </kw>
 <kw name="Switch to iframe" library="base">
 <kw name="Select Frame" library="SeleniumLibrary">
 <arg>${FRAME}</arg>
 <doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<msg timestamp="20210401 19:07:30.771" level="INFO">Selecting frame 'css:iframe#Simulator'.</msg>
-<status status="PASS" starttime="20210401 19:07:30.771" endtime="20210401 19:07:30.795"/>
+<msg timestamp="20210401 19:19:49.176" level="INFO">Selecting frame 'css:iframe#Simulator'.</msg>
+<status status="PASS" starttime="20210401 19:19:49.176" endtime="20210401 19:19:49.200"/>
 </kw>
-<status status="PASS" starttime="20210401 19:07:30.771" endtime="20210401 19:07:30.795"/>
+<status status="PASS" starttime="20210401 19:19:49.176" endtime="20210401 19:19:49.200"/>
 </kw>
-<status status="PASS" starttime="20210401 19:07:30.761" endtime="20210401 19:07:30.795"/>
+<status status="PASS" starttime="20210401 19:19:49.166" endtime="20210401 19:19:49.200"/>
 </kw>
 <kw name="E tenho a informacao do seguro:" library="simuladoresPage">
 <arg>${data}</arg>
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${data_simulate}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20210401 19:07:30.796" level="INFO">${data_simulate} = ^&amp;*%^^</msg>
-<status status="PASS" starttime="20210401 19:07:30.795" endtime="20210401 19:07:30.796"/>
+<msg timestamp="20210401 19:19:49.201" level="INFO">${data_simulate} = 22-HT-53</msg>
+<status status="PASS" starttime="20210401 19:19:49.201" endtime="20210401 19:19:49.201"/>
 </kw>
-<status status="PASS" starttime="20210401 19:07:30.795" endtime="20210401 19:07:30.796"/>
+<status status="PASS" starttime="20210401 19:19:49.200" endtime="20210401 19:19:49.201"/>
 </kw>
+<kw name="Quando submeto a informacao do seguro" library="simuladoresPage">
 <kw name="Quando preencho as informaçoes" library="simuladoresPage">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${license_text}</arg>
 <arg>${LONGTIMEOUT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210401 19:07:30.796" endtime="20210401 19:07:30.818"/>
+<status status="PASS" starttime="20210401 19:19:49.202" endtime="20210401 19:19:49.225"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${license_text}</arg>
 <arg>${data_simulate}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210401 19:07:30.818" level="INFO">Typing text '^&amp;*%^^' into text field 'xpath://div[@class="LicenseContainer OSInline"]//input'.</msg>
-<status status="PASS" starttime="20210401 19:07:30.818" endtime="20210401 19:07:30.883"/>
+<msg timestamp="20210401 19:19:49.226" level="INFO">Typing text '22-HT-53' into text field 'xpath://div[@class="LicenseContainer OSInline"]//input'.</msg>
+<status status="PASS" starttime="20210401 19:19:49.225" endtime="20210401 19:19:49.299"/>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <arg>${simulate_button}</arg>
 <arg>Tab</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20210401 19:07:30.884" level="INFO">Sending key(s) ('Tab',) to css:input[class*=NextButton] element.</msg>
-<msg timestamp="20210401 19:07:31.182" level="INFO">Sending keys Tab</msg>
-<status status="PASS" starttime="20210401 19:07:30.883" endtime="20210401 19:07:31.186"/>
+<msg timestamp="20210401 19:19:49.299" level="INFO">Sending key(s) ('Tab',) to css:input[class*=NextButton] element.</msg>
+<msg timestamp="20210401 19:19:49.608" level="INFO">Sending keys Tab</msg>
+<status status="PASS" starttime="20210401 19:19:49.299" endtime="20210401 19:19:49.613"/>
 </kw>
 <kw name="Wait for loading icon to disappears" library="simuladoresPage">
 <kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
 <arg>${loading_icon}</arg>
 <doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20210401 19:07:31.187" endtime="20210401 19:07:31.195"/>
+<status status="PASS" starttime="20210401 19:19:49.614" endtime="20210401 19:19:49.622"/>
 </kw>
-<status status="PASS" starttime="20210401 19:07:31.186" endtime="20210401 19:07:31.196"/>
+<status status="PASS" starttime="20210401 19:19:49.613" endtime="20210401 19:19:49.622"/>
 </kw>
-<status status="PASS" starttime="20210401 19:07:30.796" endtime="20210401 19:07:31.196"/>
+<status status="PASS" starttime="20210401 19:19:49.201" endtime="20210401 19:19:49.622"/>
 </kw>
-<kw name="Entao verifico se o botao Seguinte esta desabilitado" library="simuladoresPage">
-<kw name="E verifico se o botao Seguinte esta desabilitado" library="simuladoresPage">
-<kw name="Check if button is disabled" library="simuladoresPage">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${disabled_button}</arg>
-<arg>${TIMEOUT}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210401 19:07:31.197" endtime="20210401 19:07:31.214"/>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${simulate_button}</arg>
+<arg>${LONGTIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210401 19:20:49.931" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-118.png"&gt;&lt;img src="selenium-screenshot-118.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210401 19:20:49.662" endtime="20210401 19:20:49.931"/>
 </kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${buttonDisabled}</var>
-<arg>${disabled_button}</arg>
-<arg>disabled</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20210401 19:07:31.223" level="INFO">${buttonDisabled} = true</msg>
-<status status="PASS" starttime="20210401 19:07:31.214" endtime="20210401 19:07:31.223"/>
+<msg timestamp="20210401 19:20:49.932" level="FAIL">Element with locator 'css:input[class*=NextButton]' not found.</msg>
+<status status="FAIL" starttime="20210401 19:19:49.622" endtime="20210401 19:20:49.932"/>
 </kw>
-<kw name="Log" library="BuiltIn">
-<arg>${buttonDisabled}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20210401 19:07:31.224" level="INFO">true</msg>
-<status status="PASS" starttime="20210401 19:07:31.223" endtime="20210401 19:07:31.224"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${simulate_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210401 19:20:49.932" endtime="20210401 19:20:49.932"/>
 </kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${buttonDisabled}</arg>
-<arg>true</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20210401 19:07:31.224" endtime="20210401 19:07:31.224"/>
+<status status="FAIL" starttime="20210401 19:19:49.201" endtime="20210401 19:20:49.933"/>
 </kw>
-<status status="PASS" starttime="20210401 19:07:31.196" endtime="20210401 19:07:31.224"/>
+<kw name="Entao devo o resultado da pré-simulação" library="simuladoresPage">
+<status status="NOT RUN" starttime="20210401 19:20:49.933" endtime="20210401 19:20:49.933"/>
 </kw>
-<status status="PASS" starttime="20210401 19:07:31.196" endtime="20210401 19:07:31.224"/>
-</kw>
-<status status="PASS" starttime="20210401 19:07:31.196" endtime="20210401 19:07:31.225"/>
-</kw>
-<status status="PASS" starttime="20210401 19:07:30.760" endtime="20210401 19:07:31.225"/>
+<status status="FAIL" starttime="20210401 19:19:49.165" endtime="20210401 19:20:49.933"/>
 </kw>
 <kw name="Finish Session" library="hooks" type="TEARDOWN">
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20210401 19:07:31.545" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-105.png"&gt;&lt;img src="selenium-screenshot-105.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20210401 19:07:31.226" endtime="20210401 19:07:31.546"/>
+<msg timestamp="20210401 19:20:50.212" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-119.png"&gt;&lt;img src="selenium-screenshot-119.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210401 19:20:49.934" endtime="20210401 19:20:50.212"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20210401 19:07:31.546" endtime="20210401 19:07:33.659"/>
+<status status="PASS" starttime="20210401 19:20:50.213" endtime="20210401 19:20:52.318"/>
 </kw>
-<status status="PASS" starttime="20210401 19:07:31.225" endtime="20210401 19:07:33.659"/>
+<status status="PASS" starttime="20210401 19:20:49.934" endtime="20210401 19:20:52.318"/>
 </kw>
-<tag>invalid</tag>
-<status status="PASS" starttime="20210401 19:07:12.968" endtime="20210401 19:07:33.660"/>
+<status status="FAIL" starttime="20210401 19:19:31.735" endtime="20210401 19:20:52.319">Element with locator 'css:input[class*=NextButton]' not found.</status>
 </test>
 <doc>Simular seguro com informações validas</doc>
-<status status="PASS" starttime="20210401 19:06:25.094" endtime="20210401 19:07:33.662"/>
+<status status="FAIL" starttime="20210401 19:16:47.975" endtime="20210401 19:20:52.321"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="3" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="3" fail="0" skip="0">invalid</stat>
+<stat pass="0" fail="1" skip="0">smoke</stat>
 </tag>
 <suite>
-<stat pass="3" fail="0" skip="0" id="s1" name="Simular Seguro Invalido">Simular Seguro Invalido</stat>
+<stat pass="0" fail="3" skip="0" id="s1" name="Simular Seguro">Simular Seguro</stat>
 </suite>
 </statistics>
 <errors>
