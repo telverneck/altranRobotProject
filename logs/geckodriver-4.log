@@ -1,0 +1,12 @@
+1617301941191	geckodriver	INFO	Listening on 127.0.0.1:62286
+1617301944221	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\telve\\AppData\\Local\\Temp\\rust_mozprofile2DbF2t"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617301955793	Marionette	INFO	Listening on port 62305
+1617301956978	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.fidelidade.pt/PT/particulares/Auto/Simuladores/Automovel/Paginas/default.aspx, line 285: unreachable code after return statement
+JavaScript warning: https://www.fidelidade.pt/_layouts/sp.ribbon.js?rev=F%2BUEJ66rbXzSvpf7nN69wQ%3D%3D, line 2: unreachable code after return statement
+JavaScript error: https://s1.byside.com/socket.io/1/jsonp-polling/cO4HYmnrCM3Z1OedfOsc?t=1617302068610&i=0, line 1: TypeError: io.j is undefined
+1617302092145	Marionette	INFO	Stopped listening on port 62305
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
