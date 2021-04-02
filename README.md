@@ -38,5 +38,5 @@ Smoke test:
 robot -d ./logs -i smoke tests
 ```
 
-
-## All reports are being located in the Log folder
+Note: add this parameters to ignore errors in the base page:
+Open Browser        about:blank   Chrome         executable_path=C:/path/to/chromedrive     options=add_argument("--ignore-certificate-errors")
