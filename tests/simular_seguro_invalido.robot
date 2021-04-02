@@ -9,7 +9,6 @@ Test Teardown       Finish Session
 Campo obrigatorio
     Dado que acesso a pagina de Simulaçao de seguro
     E tenho a informacao do seguro:  ${EMPTY}
-    # E verifico se o botao Seguinte esta desabilitado
     Quando preencho as informaçoes
     Entao verifico se o botao Seguinte esta desabilitado
 

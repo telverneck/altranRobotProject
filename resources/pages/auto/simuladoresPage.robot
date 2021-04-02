@@ -4,11 +4,11 @@ ${license_text}         xpath://div[@class="LicenseContainer OSInline"]//input
 ${simulate_button}      css:input[class*=NextButton]
 ${disabled_button}      css:input[disabled=disabled]
 ${loading_icon}         xpath://div[@class="Feedback_AjaxWait"] [@style="display: block;"]
-
+${page_titles}          Simulador Seguro Automóvel | Fidelidade
 
 ***Keywords
 Dado que acesso a pagina de Simulaçao de seguro
-    # Go to Simulador
+    Title Should Be     ${page_titles}
     Wait for dialog    
     Switch to iframe
 
@@ -45,7 +45,6 @@ Check if button is disabled
     Log     ${buttonDisabled}
     Should Be Equal  ${buttonDisabled}  true
     
-    # Run Keyword If    ${buttonDisabled}=="true"    Log    True
 
 Button Next disabled log
     LOG     Text constains  disabled

@@ -1,6 +1,7 @@
 ***Keywords*** 
 Start Session
-    Open Browser            about:blank         ${BROWSER} 
+    Open Browser            about:blank         ${BROWSER}  
+    
     Set window size         ${BROWSER_WIDTH}    ${BROWSER_HEIGHT}
 
 Finish Session
@@ -9,5 +10,5 @@ Finish Session
 
 Go to Simulador
     Start Session
-    Go To           ${BASE_URL}
+    Go To           ${BASE_URL}${SIMULATOR_URL}
   
