@@ -8,7 +8,8 @@ Resource            ../resources/pages/auto/simuladoresPage.robot
 
 ***Variables***
 ${BROWSER}               chrome
-${BASE_URL}              https://www.fidelidade.pt/PT/particulares/Auto/Simuladores/Automovel/Paginas/default.aspx
+${BASE_URL}              https://www.fidelidade.pt/
+${SIMULATOR_URL}         PT/particulares/Auto/Simuladores/Automovel/Paginas/default.aspx
 ${LONGTIMEOUT}           60
 ${TIMEOUT}               15
 ${BROWSER_WIDTH}         1440   
