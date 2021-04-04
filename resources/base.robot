@@ -1,13 +1,12 @@
 ***Settings***
 Library         SeleniumLibrary
-Library         String
 
 Resource            ../resources/hooks.robot
 Resource            ../resources/pages/auto/simuladoresPage.robot
 
 
 ***Variables***
-${BROWSER}               chrome
+${BROWSER}               chrome   
 ${BASE_URL}              https://www.fidelidade.pt/
 ${SIMULATOR_URL}         PT/particulares/Auto/Simuladores/Automovel/Paginas/default.aspx
 ${LONGTIMEOUT}           60
@@ -19,3 +18,4 @@ ${FRAME}                 css:iframe#Simulator
 ***Keywords
 Switch to iframe
     Select Frame    ${FRAME}
+    LOG             Switched to iFrame: ${FRAME}
