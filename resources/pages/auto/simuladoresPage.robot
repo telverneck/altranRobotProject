@@ -42,12 +42,7 @@ Wait for dialog
 Check if button is disabled
     Wait Until Element Is Visible   ${disabled_button}         ${TIMEOUT}
     ${buttonDisabled}=  Get Element Attribute   ${disabled_button}  disabled
-    Log     ${buttonDisabled}
     Should Be Equal  ${buttonDisabled}  true
-    
-
-Button Next disabled log
-    LOG     Text constains  disabled
 
 Wait for loading icon to disappears
     Wait Until Element Is Not Visible       ${loading_icon}

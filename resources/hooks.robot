@@ -1,8 +1,8 @@
 ***Keywords*** 
 Start Session
-    Open Browser            about:blank         ${BROWSER}  
-    
-    Set window size         ${BROWSER_WIDTH}    ${BROWSER_HEIGHT}
+    Open Browser                about:blank         ${BROWSER}  
+    Set Selenium Implicit Wait  10
+    Set window size             ${BROWSER_WIDTH}    ${BROWSER_HEIGHT}
 
 Finish Session
     Capture Page Screenshot

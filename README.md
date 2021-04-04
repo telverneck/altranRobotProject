@@ -38,5 +38,17 @@ Smoke test:
 robot -d ./logs -i smoke tests
 ```
 
+## How to run Tests Parallelly:
+Install robotframework-pabot  
+
+```shell
+pip install -U robotframework-pabot 
+```
+
+Run: 
+```shell
+pabot --processes 2 --outputdir Results\ tests\*.robot
+```
+
 Note: add this parameters to ignore errors in the base page:
 Open Browser        about:blank   Chrome         executable_path=C:/path/to/chromedrive     options=add_argument("--ignore-certificate-errors")
