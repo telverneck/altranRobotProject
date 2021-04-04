@@ -1,5 +1,5 @@
 ***Settings***
-Documentation       Simular seguro com informações validas
+Documentation       Simular seguro com informações invalidas
 Resource            ../resources/base.robot
 
 Test Setup          Go to Simulador 
